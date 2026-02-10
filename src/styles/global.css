@@ -1,0 +1,41 @@
+html, body, #root { height: 100%; margin: 0; font-family: system-ui, Arial, sans-serif; }
+.appRoot { height: 100%; display: flex; flex-direction: column; }
+.app-main { flex: 1; padding: 16px; background: #f5f5f5; }
+.toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+.toolbar .toolbarGroup { display: flex; gap: 6px; align-items: center; }
+.toolbar .label { font-size: 12px; opacity: 0.7; }
+.toolbar .hint { font-size: 12px; opacity: 0.7; margin-left: 6px; }
+.toolbar button.primary { font-weight: 600; }
+
+.board {
+  position: relative;
+  flex: 1;
+  background: #f6f6f8;
+  overflow: hidden;
+  user-select: none;
+}
+.board.createMode { cursor: crosshair; }
+
+.trash {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 140px;
+  height: 90px;
+  border: 2px dashed #999;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.7);
+}
+.trash.active {
+  border-color: #d33;
+  background: rgba(255, 220, 220, 0.9);
+}
